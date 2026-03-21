@@ -31,7 +31,7 @@ class Emmiter {
         }
     };
 
-    emit(eventName, args) {
+    emit(eventName, ...args) {
         if (this._events[eventName]) {
             for (const fn of this._events[eventName]) {
                 fn(...args);
