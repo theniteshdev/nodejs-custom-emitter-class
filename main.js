@@ -9,8 +9,8 @@ class Emmiter {
         this._events = {};
     };
 
-    _events = {};
-    _onceEvents = {};
+    _events;
+    _onceEvents;
     _eventsCount;
     _maxListeners;
 
@@ -31,7 +31,7 @@ class Emmiter {
         }
     };
 
-    emit(eventName, args) {
+    emit(eventName, ...args) {
         if (this._events[eventName]) {
             for (const fn of this._events[eventName]) {
                 fn(...args);
