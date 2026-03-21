@@ -9,8 +9,8 @@ class Emmiter {
         this._events = {};
     };
 
-    _events = {};
-    _onceEvents = {};
+    _events;
+    _onceEvents;
     _eventsCount;
     _maxListeners;
 
